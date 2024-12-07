@@ -32,6 +32,20 @@ int _tmain(int argc, _TCHAR* argv[]) {
 		mfst.savededucation();									
 
 		mfst.printrules();
+
+		for (int i = 0; i < LEX.lexTable.size; i++) {
+			if (LEX.lexTable.table[i].lexema[0] == LEX_EQUAL) {
+				if (PN::PolishNotation(i + 1, LEX.lexTable, LEX.idTable)) {
+					cout << LEX.lexTable.table[i].sn << ": польская запись построена\n";
+				}
+				else {
+					cout << LEX.lexTable.table[i].sn << ": польская запись не построена\n";
+				}
+			}
+		}
+
+		LT::WriteInFile(LEX.lexTable);
+
 		Log::Close(log);
 		Out::Close(out);
 	}

@@ -19,3 +19,4 @@
 #include "FST.h"		
 #include "GRB.h"
 #include "MFST.h"
+#include "PolishNotation.h"

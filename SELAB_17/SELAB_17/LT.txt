@@ -1,7 +1,7 @@
 1	tfi(ti,ti)
 2	{
 3	dti;
-4	i=iv(ivi);
+4	i=i*(i+i);
 5	ri;
 6	};
 7	tfi(ti,ti)
@@ -9,7 +9,7 @@
 9	dti;
 10	dtfi(ti,ti,
 11	ti);
-12	i=i(i,l,l)vi;
+12	i=i(i,l,l)+i;
 13	ri;
 14	};
 15	m

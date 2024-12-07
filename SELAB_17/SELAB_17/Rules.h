@@ -44,9 +44,15 @@ namespace GRB{
 			Rule::Chain(5, TS('i'), TS('('), NS('W'), TS(')'), NS('M'))
 		),
 		Rule(NS('M'), GRB_ERROR_SERIES + 3,
-			2,
-			Rule::Chain(2, TS('v'), NS('E')),
-			Rule::Chain(3, TS('v'), NS('E'), NS('M'))
+			8,
+			Rule::Chain(2, TS('+'), NS('E')),
+			Rule::Chain(3, TS('+'), NS('E'), NS('M')),
+			Rule::Chain(2, TS('-'), NS('E')),
+			Rule::Chain(3, TS('-'), NS('E'), NS('M')),
+			Rule::Chain(2, TS('*'), NS('E')),
+			Rule::Chain(3, TS('*'), NS('E'), NS('M')),
+			Rule::Chain(2, TS('/'), NS('E')),
+			Rule::Chain(3, TS('/'), NS('E'), NS('M'))
 		),
 		Rule(NS('F'), GRB_ERROR_SERIES + 4,
 			2,

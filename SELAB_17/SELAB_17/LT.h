@@ -17,10 +17,10 @@
 #define LEX_BRACELET '}' // лексема для }
 #define LEX_LEFTTHESIS '(' // лексема для (
 #define LEX_RIGHTTHESIS ')' // лексема для )
-#define LEX_PLUS 'v' // лексема для +
-#define LEX_MINUS 'v' // лексема для -
-#define LEX_STAR 'v' // лексема для *
-#define LEX_DIRSLASH 'v' // лексема для /
+#define LEX_PLUS '+' // лексема для +
+#define LEX_MINUS '-' // лексема для -
+#define LEX_STAR '*' // лексема для *
+#define LEX_DIRSLASH '/' // лексема для /
 #define LEX_EQUAL '=' // лексема для =
 
 namespace LT { // таблица лексем
@@ -40,4 +40,5 @@ namespace LT { // таблица лексем
 	void Add(LexTable& lextable, Entry entry); // добавить строку в таблицу лексем
 	Entry GetEntry(LexTable& lextable, int n); // получить строку из таблицы лексем
 	void Delete(LexTable& lextable); // удалить таблицу лексем
+	void WriteInFile(LexTable& lextable);
 }

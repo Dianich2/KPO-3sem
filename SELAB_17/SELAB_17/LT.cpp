@@ -35,4 +35,26 @@ namespace LT {
 		lextable.maxsize = 0;
 		lextable.size = 0;
 	}
+
+	void WriteInFile(LexTable& lextable) {
+		ofstream LT_file;
+		LT_file.open("NewLT.txt");
+		LT::Entry cur_lex;
+		int currentLine = 1;
+		LT_file << currentLine;
+		LT_file << '\t';
+		for (int i = 0; i < lextable.size; i++)
+		{
+			cur_lex = LT::GetEntry(lextable, i);
+			if (currentLine != cur_lex.sn)
+			{
+				currentLine = cur_lex.sn;
+				LT_file << '\n';
+				LT_file << currentLine;
+				LT_file << '\t';
+			}
+			LT_file << cur_lex.lexema[0];
+		}
+		LT_file.close();
+	}
 }
